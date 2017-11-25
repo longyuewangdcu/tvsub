@@ -1,12 +1,23 @@
-TVsub: DCU-Tencent Chinese-English Dialogue Corpus
-------------
+# TVsub: DCU-Tencent Chinese-English Dialogue Corpus
 
-One Paragraph of project description goes here
+The corpus is designed to be a dialogue domain and parallel data with larger-context information for research and development purpose. More than two million sentence pairs were extracted from the subtitles of television episodes. 
 
-## We will upload the corpus once our AAAI-2018 paper is published.
+Initially, the corpus was used for [pro-drop language](https://en.wikipedia.org/wiki/Pro-drop_language) translation. 
+
+for various natural language processing tasks such as
+
+We will upload the data once our AAAI-2018 paper is published.
+
+## Novelty
+
+The difference to 
 
 
-Experiments evaluate the method for translation of Chinese-English subtitles. More than two million sentence pairs were extracted from the subtitles of television episodes.2 We pre-processed the extracted data using our in-house scripts (Wang et al. 2016b), including sentence boundary detection and bilingual sentence alignment etc. Finally, we obtained a high-quality corpus which keeps the discourse information.
+
+
+Experiments evaluate the method for translation of Chinese-English subtitles. 
+
+ 2 We pre-processed the extracted data using our in-house scripts (Wang et al. 2016b), including sentence boundary detection and bilingual sentence alignment etc. Finally, we obtained a high-quality corpus which keeps the discourse information.
 
 
 ## Getting Started
@@ -92,4 +103,12 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
+
+This work is supported by the Science Foundation of Ireland (SFI) ADAPT project (Grant No.:13/RC/2106), and partly supported by the DCU-Huawei Joint Project (Grant No.:201504032-A (DCU), YB2015090061 (Huawei)).
+
+IMPORTANT: If you use the OpenSubtitle corpus: Please, add a link to http://www.opensubtitles.org/ to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!
+
+The data were crawled from the subtitle websites: http://assrt.net and http://www.zimuzu.tv.
+
+The ADAPT Centre for Digital Content Technology is funded under the SFI Research Centres Programme (Grant 13/RC/2106) and is co-funded under the European Regional Development Fund. Work was done when Longyue Wang was interning at Tencent AI Lab.
 
