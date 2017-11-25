@@ -46,7 +46,7 @@ The folder stucture is as follows:
 
 ## Data Details
 
-![data_detail](/img/data_detail.png)
+![data_details](/img/data_details.png)
 
 ## Authors
 
