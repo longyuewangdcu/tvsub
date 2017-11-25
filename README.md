@@ -1,92 +1,46 @@
 # TVsub: DCU-Tencent Chinese-English Dialogue Corpus
 
-The corpus is designed to be a dialogue domain and parallel data with larger-context information for research and development purpose. More than two million sentence pairs were extracted from the subtitles of television episodes. 
+The corpus is designed to be a dialogue domain and parallel data with larger-context information for research purpose. More than two million sentence pairs were extracted from the subtitles of television episodes. 
 
-Initially, the corpus was used for [pro-drop language](https://en.wikipedia.org/wiki/Pro-drop_language) translation. 
+Within the corpus, sentences are generally short and the Chinese side contains many examples of dropped pronouns (DPs). Therefore, the corpus was initially designed for [pro-drop language](https://en.wikipedia.org/wiki/Pro-drop_language) translation task, and the related paper (Translating Pro-Drop Languages with Reconstruction Models) was accepted by [AAAI 2018](https://aaai.org/Conferences/AAAI-18/) conference. 
 
-for various natural language processing tasks such as
+Actually, the corpus can be also used for various translation tasks such as larger-context MT ([Exploiting Cross-Sentence Context for Neural Machine Translation](https://arxiv.org/pdf/1704.04347.pdf); [Learning to Remember Translation History with a Continuous Cache](http://www.zptu.net)). 
 
-We will upload the data once our AAAI-2018 paper is published.
+We will upload the data once our AAAI 2018 paper is published.
 
 ## Novelty
 
-The difference to 
+The difference to other existing bilignaul subtitle corpora:
 
+* We only extract subtitles of television episodes instead of movie ones. The vocabulary in movies is more sparsity than that in TV series. To aviod the long-tail problems, we use TV series data for MT tasks.
 
+* We pre-processed the extracted data using a number of [in-house scripts](http://computing.dcu.ie/~lwang/publication/LREC2016_camera_ready.pdf) including sentence boundary detection and bilingual sentence alignment etc. Thus, we obtained a more cleaner, better-aligned, high-quality corpus.
 
+* We keep the larger-context information instead of disordering sentences. Thus, you can mine useful discourse information from the previous or following sentences for MT.
 
-Experiments evaluate the method for translation of Chinese-English subtitles. 
+* We randomly select two complete television episodes as the tuning set, and another two episodes as the test set. We manually create multiple references for them.
 
- 2 We pre-processed the extracted data using our in-house scripts (Wang et al. 2016b), including sentence boundary detection and bilingual sentence alignment etc. Finally, we obtained a high-quality corpus which keeps the discourse information.
-
+* In order to re-implement our AAAI-18 paper (Translating Pro-Drop Languages with Reconstruction Models), we also released the +DP version of corpus, in which the Chinese sentences are automatically labelled DPs using alignment information.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
+Plsease clone the repo, because we may update new version of data in the future.
 
 ```
-Give examples
+git clone https://github.com/longyuewangdcu/tvsub.git
 ```
 
-### Installing
+The folder stucture is as follows:
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+> tvsub (root)
+>> data (orignal corpus)
+>>> train
+>>> dev
+>>> test
+>> data+dp (+DP corpus)
+>>> train
+>>> dev
+>>> test
 
 ## Authors
 
@@ -96,19 +50,15 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+The data were crawled from the subtitle websites: http://assrt.net and http://www.zimuzu.tv.
+
+**This data is only used for research purpose**. If you use the TVsub corpus, please add these links (http://
+www.zimuzu.tv and http://assrt.net) to your website and publications!
+
+Plsease read the [License Agreement](https://creativecommons.org/licenses/by-nc-nd/4.0/) before you use the data.
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
-
-This work is supported by the Science Foundation of Ireland (SFI) ADAPT project (Grant No.:13/RC/2106), and partly supported by the DCU-Huawei Joint Project (Grant No.:201504032-A (DCU), YB2015090061 (Huawei)).
-
-IMPORTANT: If you use the OpenSubtitle corpus: Please, add a link to http://www.opensubtitles.org/ to your website and to your reports and publications produced with the data! I promised this when I got the data from the providers of that website!
-
-The data were crawled from the subtitle websites: http://assrt.net and http://www.zimuzu.tv.
+The released data is part of contribution of our AAAI-18 paper. 
 
 The ADAPT Centre for Digital Content Technology is funded under the SFI Research Centres Programme (Grant 13/RC/2106) and is co-funded under the European Regional Development Fund. Work was done when Longyue Wang was interning at Tencent AI Lab.
-
