@@ -1,16 +1,16 @@
 # TVsub: DCU-Tencent Chinese-English Dialogue Corpus
 
-The corpus is designed to be a dialogue domain and parallel data with larger-context information for research purpose. More than two million sentence pairs were extracted from the subtitles of television episodes. 
+The corpus is designed to be dialogue domain and parallel data with larger-context information for research purpose. More than two million sentence pairs were extracted from the subtitles of television episodes. 
 
 Within the corpus, sentences are generally short and the Chinese side contains many examples of dropped pronouns (DPs). Therefore, the corpus was initially designed for [pro-drop language](https://en.wikipedia.org/wiki/Pro-drop_language) translation task, and the related paper (Translating Pro-Drop Languages with Reconstruction Models) was accepted by [AAAI 2018](https://aaai.org/Conferences/AAAI-18/) conference. 
 
 Actually, the corpus can be also used for various translation tasks such as larger-context MT ([Exploiting Cross-Sentence Context for Neural Machine Translation](https://arxiv.org/pdf/1704.04347.pdf); [Learning to Remember Translation History with a Continuous Cache](http://www.zptu.net)). 
 
-We will upload the data once our AAAI 2018 paper is published.
+**We will upload the data once our AAAI 2018 paper is published!**
 
 ## Novelty
 
-The difference to other existing bilignaul subtitle corpora:
+The differences to other existing bilignaul subtitle corpora are as follows:
 
 * We only extract subtitles of television episodes instead of movie ones. The vocabulary in movies is more sparsity than that in TV series. To aviod the long-tail problems, we use TV series data for MT tasks.
 
@@ -20,7 +20,7 @@ The difference to other existing bilignaul subtitle corpora:
 
 * We randomly select two complete television episodes as the tuning set, and another two episodes as the test set. We manually create multiple references for them.
 
-* In order to re-implement our AAAI-18 paper (Translating Pro-Drop Languages with Reconstruction Models), we also released the +DP version of corpus, in which the Chinese sentences are automatically labelled DPs using alignment information.
+* In order to re-implement our AAAI-18 paper (Translating Pro-Drop Languages with Reconstruction Models), we also released the +DP corpus, in which the Chinese sentences are automatically labelled with DPs using alignment information.
 
 ## Getting Started
 
@@ -32,21 +32,26 @@ git clone https://github.com/longyuewangdcu/tvsub.git
 
 The folder stucture is as follows:
 
-> tvsub (root)
->> data (orignal corpus)
->>> train
->>> dev
->>> test
->> data+dp (+DP corpus)
->>> train
->>> dev
->>> test
+```
+++ tvsub (root)
+++++ data (orignal corpus)
+++++++++ train
+++++++++ dev
+++++++++ test
+++++ data+dp (+DP corpus)
+++++++++ train
+++++++++ dev
+++++++++ test
+```
+
+## Data Details
+
+![data_detail](/img/data_detail.png)
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* [**Longyue Wang**](http://computing.dcu.ie/~lwang/) - *crawling and pre-processing*
+* [**Zhaopeng Tu**](http://www.zptu.net) - *dev and test sets*
 
 ## License
 
