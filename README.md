@@ -46,19 +46,38 @@ The folder stucture is as follows:
 
 ## Data Details
 
+The following table lists the statistics of the corpus. 
+
 ![data_details](/img/data_details.png)
 
 ## Authors
 
-* [**Longyue Wang**](http://computing.dcu.ie/~lwang/) - *crawling and pre-processing*
+* [**Longyue Wang**](http://computing.dcu.ie/~lwang/) - *crawling and pre-processing data*
 * [**Zhaopeng Tu**](http://www.zptu.net) - *dev and test sets*
+
+## Publications
+
+if you use the data, please cite the following paper:
+
+Longyue Wang, Zhaopeng Tu, Shuming Shi, Tong Zhang, Yvette Graham, Qun Liu. (2018). "Translating Pro-Drop Languages with Reconstruction Models", Proceedings of the 32nd AAAI Conference on Artificial Intelligence (AAAI 2018).
+
+```
+@inproceedings{wang2018aaai,
+  title={Translating Pro-Drop Languages with Reconstruction Models},
+  author={Wang, Longyue and Tu, Zhaopeng and Shi, Shuming and Zhang, Tong and Graham, Yvette and Liu, Qun},
+  year={2018},
+  publisher = {{AAAI} Press},
+  booktitle={Proceedings of the Thirty-Second {AAAI} Conference on Artificial Intelligence},
+  address={New Orleans, Louisiana, USA},
+  pages={1--9}
+}
+```
+
+The data were crawled from the subtitle websites: http://assrt.net and http://www.zimuzu.tv. If you use the TVsub corpus, please add these links (http://www.zimuzu.tv and http://assrt.net) to your website and publications!
 
 ## License
 
-The data were crawled from the subtitle websites: http://assrt.net and http://www.zimuzu.tv.
-
-**This data is only used for research purpose**. If you use the TVsub corpus, please add these links (http://
-www.zimuzu.tv and http://assrt.net) to your website and publications!
+**This data is only used for research purpose**. 
 
 Plsease read the [License Agreement](https://creativecommons.org/licenses/by-nc-nd/4.0/) before you use the data.
 
