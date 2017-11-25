@@ -48,9 +48,7 @@ The folder stucture is as follows:
 
 The following table lists the statistics of the corpus. 
 
-![data_details](./img/data_details.png =250x)
-
-<img src="./img/data_details.png" alt="Drawing" style="width: 1px;"/>
+![data_details](./img/data_details.png)
 
 ## Authors
 
