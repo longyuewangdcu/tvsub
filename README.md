@@ -1,12 +1,12 @@
 # TVsub: DCU-Tencent Chinese-English Dialogue Corpus
 
+**The data are used in our AAAI-18 paper [Translating Pro-Drop Languages with Reconstruction Models](https://arxiv.org/abs/1801.03257).**
+
 The corpus is designed to be dialogue domain and parallel data with larger-context information for research purpose. More than two million sentence pairs were extracted from the subtitles of television episodes. 
 
 Within the corpus, sentences are generally short and the Chinese side contains many examples of dropped pronouns (DPs). Therefore, the corpus was initially designed for [pro-drop language](https://en.wikipedia.org/wiki/Pro-drop_language) translation task, and the related paper (Translating Pro-Drop Languages with Reconstruction Models) was accepted by [AAAI 2018](https://aaai.org/Conferences/AAAI-18/) conference. 
 
 Actually, the corpus can be also used for various translation tasks such as larger-context MT ([Exploiting Cross-Sentence Context for Neural Machine Translation](https://arxiv.org/pdf/1704.04347.pdf); [Learning to Remember Translation History with a Continuous Cache](http://www.zptu.net)). 
-
-**We will upload the data once our AAAI 2018 paper is published!**
 
 ## Novelty
 
@@ -34,11 +34,12 @@ The folder stucture is as follows:
 
 ```
 ++ tvsub (root)
-++++ data (orignal corpus)
+++++ data
+++++++ orignal corpus
 ++++++++ train
 ++++++++ dev
 ++++++++ test
-++++ data+dp (+DP corpus)
+++++++ preprocessed corpus
 ++++++++ train
 ++++++++ dev
 ++++++++ test
@@ -57,9 +58,10 @@ The following table lists the statistics of the corpus.
 
 ## Publications
 
-if you use the data, please cite the following paper:
 
-Longyue Wang, Zhaopeng Tu, Shuming Shi, Tong Zhang, Yvette Graham, Qun Liu. (2018). "Translating Pro-Drop Languages with Reconstruction Models", Proceedings of the 32nd AAAI Conference on Artificial Intelligence (AAAI 2018).
+If you use the data, please cite the following paper:
+
+Longyue Wang, Zhaopeng Tu, Shuming Shi, Tong Zhang, Yvette Graham, Qun Liu. (2018). "[Translating Pro-Drop Languages with Reconstruction Models](https://arxiv.org/abs/1801.03257)", Proceedings of the 32nd AAAI Conference on Artificial Intelligence (AAAI 2018).
 
 ```
 @inproceedings{wang2018aaai,
